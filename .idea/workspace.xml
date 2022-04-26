@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d907c848-9330-4b3c-9ac8-f5454bc37e50" name="Changes" comment="add preview">
+      <change afterPath="$PROJECT_DIR$/.idea/frontend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dev/tests/integration/testsuite/Magento/Catalog/Controller/Adminhtml/Product/Set/SaveTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dev/tests/integration/testsuite/Magento/Catalog/Controller/Adminhtml/Product/Set/SaveTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dev/tests/static/testsuite/Magento/Test/Integrity/ComposerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dev/tests/static/testsuite/Magento/Test/Integrity/ComposerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lib/web/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lib/web/jquery.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2890k54No3zithqDp3C1rxV8wuT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ksenia/misc/apps/magento-elogic.local&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Magento_ostafiichuk/skeleton/web/css/source" />
+      <recent name="$PROJECT_DIR$/Magento_ostafiichuk/skeleton/web/css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Magento_ostafiichuk/skeleton/web/css/source" />
+      <recent name="$PROJECT_DIR$/Magento_ostafiichuk/skeleton/web" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d907c848-9330-4b3c-9ac8-f5454bc37e50" name="Changes" comment="" />
+      <created>1650613634776</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650613634776</updated>
+      <workItem from="1650613636504" duration="9084000" />
+      <workItem from="1650626998282" duration="12255000" />
+      <workItem from="1650639475517" duration="659000" />
+      <workItem from="1650640393286" duration="971000" />
+      <workItem from="1650647179326" duration="467000" />
+      <workItem from="1650647745722" duration="2744000" />
+      <workItem from="1650652663025" duration="6372000" />
+      <workItem from="1650741304212" duration="5147000" />
+      <workItem from="1650746621125" duration="1466000" />
+      <workItem from="1650748149575" duration="681000" />
+    </task>
+    <task id="LOCAL-00001" summary="add preview">
+      <created>1650747811183</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650747811183</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add registration theme" />
+    <MESSAGE value="add preview" />
+    <option name="LAST_COMMIT_MESSAGE" value="add preview" />
+  </component>
+</project>
