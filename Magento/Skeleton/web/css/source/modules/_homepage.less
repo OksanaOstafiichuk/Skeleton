@@ -2,16 +2,24 @@
 //  Common (styles-m.css)
 //  _____________________________________________
 & when (@media-common = true) {
-    .pagebuilder-poster-content {
-        width: 50%;
+    .pagebuilder-banner-wrapper .pagebuilder-poster-content {
+        width: 60%;
     }
 
-    .pagebuilder-button-link {
-        padding: 13px 0px;
+    h2 {
+        letter-spacing: 8px;
+        font-size: 26px;
+    }
+
+    a.pagebuilder-button-link, button.pagebuilder-button-link, div.pagebuilder-button-link{
+        padding: 0;
         color: @color-Skeleton-black;
-        text-decoration: underline;
+        font-weight: inherit;
+        border-bottom: 2px solid @color-Skeleton-black;
+        border-radius: 0;
     }
 }
+
 
 
 
