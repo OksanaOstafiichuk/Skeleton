@@ -1,0 +1,59 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+& when (@media-common = true) {
+
+    a.pagebuilder-button-link, button.pagebuilder-button-link, div.pagebuilder-button-link{
+        padding: 0;
+        color: @color-Skeleton-black;
+        font-weight: inherit;
+        border-bottom: 2px solid @color-Skeleton-black;
+        border-radius: 0;
+    }
+}
+//
+//  Banner
+// ______________________________________________
+
+h2 {
+    letter-spacing: 8px;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+h2 > span {
+    background-color: rgba(240, 240, 240, 0.3);;
+}
+
+p {
+    color: @color-Skeleton-gray;
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .main-banner .pagebuilder-poster-content {
+        width: 60%;
+    }
+}
+//
+//  Banner-top-home
+// ______________________________________________
+
+.banner-top-home {
+    margin: 30px 15px 60px 15px;
+
+    p {
+        font-style: italic;
+    }
+
+    .pagebuilder-poster-content {
+        width: 270px;
+        margin-left: auto;
+   }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .pagebuilder-column {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+
