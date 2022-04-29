@@ -2,14 +2,6 @@
 //  Common (styles-m.css)
 //  _____________________________________________
 & when (@media-common = true) {
-    .pagebuilder-banner-wrapper .pagebuilder-poster-content {
-        width: 60%;
-    }
-
-    h2 {
-        letter-spacing: 8px;
-        font-size: 26px;
-    }
 
     a.pagebuilder-button-link, button.pagebuilder-button-link, div.pagebuilder-button-link{
         padding: 0;
@@ -20,7 +12,19 @@
     }
 }
 
+h2 {
+    letter-spacing: 8px;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
 
+h2 > span {
+    background-color: rgba(240, 240, 240, 0.3);;
+}
 
-
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .pagebuilder-banner-wrapper .pagebuilder-poster-content {
+        width: 60%;
+    }
+}
 
