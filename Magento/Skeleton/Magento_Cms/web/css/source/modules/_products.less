@@ -1,0 +1,174 @@
+//
+//  Our Products
+// ______________________________________________
+
+.catalog-title {
+    position: relative;
+    margin-bottom: @indent__l;
+    padding-bottom: @indent__base;
+
+    h2 {
+        margin: 0;
+        color: @color-Skeleton__secondary-color;
+        font-weight: 600;
+        .lib-font-size(24);
+        //font-size: 24px;
+        padding: 0;
+        position: relative;
+        letter-spacing: 1px;
+    }
+
+    p {
+        letter-spacing: 1px;
+        .lib-font-size(14);
+        //font-size: 14px;
+        padding-bottom: @indent__xs;
+        margin: 0;
+    }
+}
+
+.catalog-title:after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background: @color-Skeleton__secondary-color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.products {
+    margin: 0;
+}
+
+.product-item-details {
+    margin-top: @indent__l;
+    text-align: center;
+
+    .product-item-name {
+        margin-bottom: @indent__s;
+
+        .product-item-link {
+            .lib-font-size(14);
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: @color-Skeleton__accent-text;
+
+            &:hover {
+                color: @color-Skeleton__secondary-color;
+            }
+        }
+    }
+}
+
+
+
+.product-item .price-box {
+    margin: 0;
+}
+
+.special-price {
+    margin: 0;
+    padding: 0;
+
+    .price {
+        font-family: @font-family-name__oswald;
+        color: @color-Skeleton__secondary-color;
+        .lib-font-size(18);
+        font-weight: 700;
+    }
+}
+
+.price-label {
+    display: none;
+}
+
+.old-price {
+    margin: 0;
+    padding: 0;
+
+    .price {
+        font-family: @font-family-name__oswald;
+        font-weight: 400;
+        .lib-font-size(14);
+        color: @color-Skeleton__secondary-text;
+        text-decoration: line-through;
+        vertical-align: baseline;
+    }
+}
+
+//button
+
+.action.tocart.primary {
+    padding: 0 0 10px 0;
+    border-radius: 0;
+    background: transparent;
+    border-bottom: 1px solid @color-Skeleton__secondary-color;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+
+    span {
+        font-family: @font-family-name__oswald;
+        .lib-font-size(14);
+        letter-spacing: 1px;
+        font-weight: @font-weight__heavier;
+        color: @color-Skeleton__secondary-color;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.actions-primary {
+    position: absolute;
+    top: 95%;
+    left: 0;
+    z-index: 1;
+
+    transform: translateX(0%);
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+.products-grid .product-item-info:hover {
+    .actions-primary {
+        transform: translateX(140%);
+        opacity: 1;
+    }
+
+    .price-box {
+        transform: translateX(30%);
+        opacity: 0;
+        transition: all .4s ease;
+    }
+
+    .product-item-actions .actions-primary + .actions-secondary {
+        transform: translateY(0%);
+        opacity: 1;
+
+    }
+}
+
+.product-item-actions .actions-primary + .actions-secondary {
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgba(255,255,255,.96);
+    padding: 15px 0;
+    width: 60px;
+
+    position: absolute;
+    top: 25%;
+    left: 41%;
+    z-index: 1;
+
+    transform: translateY(190%);
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+.action.product:before {
+    content: @icon-star-empty;
+}

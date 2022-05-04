@@ -5,9 +5,9 @@
 
     a.pagebuilder-button-link, button.pagebuilder-button-link, div.pagebuilder-button-link{
         padding: 0;
-        color: @color-Skeleton-black;
+        color: @color-Skeleton__secondary-color;
         font-weight: inherit;
-        border-bottom: 2px solid @color-Skeleton-black;
+        border-bottom: 2px solid @color-Skeleton__secondary-color;
         border-radius: 0;
     }
 }
@@ -17,8 +17,8 @@
 
 h2 {
     letter-spacing: 8px;
-    font-size: 26px;
-    margin-bottom: 5px;
+    .lib-font-size(26);
+    margin-bottom: @indent__xs;
 }
 
 h2 > span {
@@ -26,7 +26,7 @@ h2 > span {
 }
 
 p {
-    color: @color-Skeleton-gray;
+    color: @color-Skeleton__accent-text;
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
@@ -34,26 +34,37 @@ p {
         width: 60%;
     }
 }
+
 //
-//  Banner-top-home
+//  Categories
 // ______________________________________________
 
 .banner-top-home {
-    margin: 30px 15px 60px 15px;
-
     p {
-        font-style: italic;
+        font-style: @font-style__emphasis;
     }
 
     .pagebuilder-poster-content {
         width: 270px;
         margin-left: auto;
-   }
-}
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .pagebuilder-column {
-        margin-right: 15px;
-        margin-left: 15px;
     }
 }
 
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .banner-top-home {
+        margin: @indent__l @indent__base - 5 @indent__base * 3 @indent__base - 5;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .pagebuilder-column:not(:last-child) {
+        margin-right: @indent__l;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .banner-top-home {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
