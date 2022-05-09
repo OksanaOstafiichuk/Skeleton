@@ -15,9 +15,8 @@
     h2 {
         margin: 0;
         color: @color-Skeleton__secondary-color;
-        font-weight: 600;
+        font-weight: @font-weight__semibold;
         .lib-font-size(24);
-        //font-size: 24px;
         padding: 0;
         position: relative;
         letter-spacing: 1px;
@@ -26,7 +25,6 @@
     p {
         letter-spacing: 1px;
         .lib-font-size(14);
-        //font-size: 14px;
         padding-bottom: @indent__xs;
         margin: 0;
     }
@@ -55,7 +53,7 @@
 
         .product-item-link {
             .lib-font-size(14);
-            font-weight: 400;
+            font-weight: @font-weight__regular;
             letter-spacing: 1px;
             color: @color-Skeleton__accent-text;
 
@@ -80,7 +78,7 @@
         font-family: @font-family-name__oswald;
         color: @color-Skeleton__secondary-color;
         .lib-font-size(18);
-        font-weight: 700;
+        font-weight: @font-weight__bold;
     }
 }
 
@@ -94,7 +92,7 @@
 
     .price {
         font-family: @font-family-name__oswald;
-        font-weight: 400;
+        font-weight: @font-weight__regular;
         .lib-font-size(14);
         color: @color-Skeleton__secondary-text;
         text-decoration: line-through;
@@ -105,7 +103,7 @@
 //button
 
 .action.tocart.primary {
-    padding: 0 0 10px 0;
+    padding: 0 0 @indent__s 0;
     border-radius: 0;
     background: transparent;
     border-bottom: 1px solid @color-Skeleton__secondary-color;
@@ -161,7 +159,7 @@
     align-items: center;
 
     background: rgba(255,255,255,.96);
-    padding: 15px 0;
+    padding: @indent__base - 5 0;
     width: 60px;
 
     position: absolute;
