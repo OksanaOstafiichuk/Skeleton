@@ -1,0 +1,90 @@
+//
+//  Brands
+// ______________________________________________
+
+& when (@media-common = true) {
+    .shop-by-brands {
+        margin: @indent__base * 3 0;
+        position: relative;
+
+    }
+
+    .title-brand {
+        text-align: center;
+        z-index: 1;
+        margin-bottom: @indent__l;
+
+        h2 {
+            display: inline-block;
+            padding: 0 @indent__xs;
+
+            color: @color-Skeleton__black;
+            .lib-font-size(36);
+            font-weight: @font-weight__regular;
+            letter-spacing: 0;
+            background-color: @color-Skeleton__accent-color;
+        }
+    }
+
+    hr {
+        position: absolute;
+        width: 100%;
+        top: @indent__m;
+    }
+
+    .brand-img {
+        img {
+            cursor: pointer;
+        }
+    }
+
+    .brand-name {
+        margin-top: @indent__s;
+        p {
+            cursor: pointer;
+            color: @color-Skeleton__secondary-color;
+
+            &:hover {
+                color: @color-Skeleton__accent-text;
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .shop-by-brands {
+        .pagebuilder-column.brand {
+            .lib-vendor-prefix-flex-basis(100%);
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .shop-by-brands {
+        .pagebuilder-column.brand {
+            .lib-vendor-prefix-flex-basis(100% / 2);
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .shop-by-brands {
+        .pagebuilder-column.brand {
+            .lib-vendor-prefix-flex-basis(100% / 3);
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .shop-by-brands {
+        .pagebuilder-column:not(:last-child) {
+            margin-right: 0;
+        }
+    }
+}
