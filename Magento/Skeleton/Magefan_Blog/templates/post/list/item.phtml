@@ -1,12 +1,4 @@
-<?php
-?>
-<?php
-/**
- * Blog post list item template
- *
- * @var $block \Magefan\Blog\Block\Post\PostList\Item
- */
-?>
+
 <?php
 $_post = $block->getPost();
 $_postUrl = $block->escapeUrl($_post->getPostUrl());
@@ -70,8 +62,5 @@ $_postName = $block->escapeHtml($_post->getTitle());
                 <?= $block->escapeHtml(__('Read more &#187;')) ?>
             </a>
         </div>
-    </div>
-    <div class="post-footer">
-
     </div>
 </li>
