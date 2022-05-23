@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="footer">
+            <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="Magento_Store::switch/stores.phtml"/>
+        </referenceContainer>
+
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="footer-content">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">page-footer</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+<!--        <referenceBlock name="report.bugs" remove="true"/>-->
+        <referenceBlock name="footer_links" remove="true"/>
+
+<!--        <move element="copyright" destination="before.body.end"/>-->
+        <referenceBlock name="copyright" remove="true"/>
+        <move element="form.subscribe" destination="footer-container" before="-"/>
+
+    </body>
+</page>
