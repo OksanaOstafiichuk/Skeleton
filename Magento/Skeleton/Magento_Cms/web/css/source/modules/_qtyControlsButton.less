@@ -1,0 +1,24 @@
+& when (@media-common =true) {
+    .control {
+        display: flex;
+    }
+
+    .decrement,
+    .increment {
+        border-radius: 0;
+        background: transparent;
+        font-weight: 700;
+        font-size: 25px;
+
+        &:hover {
+            color: @color-Skeleton__button-hover;
+            border: 1px solid #cccccc;
+        }
+    }
+
+    .box-tocart .input-text.qty{
+        width: 150px;
+        border-left: 0;
+        border-right: 0;
+    }
+}
