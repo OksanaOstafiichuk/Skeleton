@@ -1,14 +1,14 @@
 & when (@media-common =true) {
     .control {
-        display: flex;
+        .lib-vendor-prefix-display(flex);
     }
 
     .decrement,
     .increment {
         border-radius: 0;
         background: transparent;
-        font-weight: 700;
-        font-size: 25px;
+        font-weight: @font-weight__bold;
+        font-size: @indent__m;
 
         &:hover {
             color: @color-Skeleton__button-hover;
