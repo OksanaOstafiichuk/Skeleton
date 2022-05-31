@@ -7,8 +7,6 @@ define(['jquery'], function ($) {
             var $btnIncrement = $('.increment');
             var $valueInput = $('#qty');
 
-            console.log(parseInt($valueInput.val()))
-
             $btnDecrement.on('click', function (evt) {
                 evt.preventDefault();
 
