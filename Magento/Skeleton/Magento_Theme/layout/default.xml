@@ -3,17 +3,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
 
-        <move element="top.search" destination="header-right" />
-        <move element="authorization-link" destination="header-links" before="-"/>
-        <move element="register-link" destination="header-links" />
-        <move element="minicart" destination="header-right" before="top.search" />
-
         <referenceContainer name="header-wrapper">
             <container name="header-right" htmlTag="div" htmlClass="header content-right">
                 <container name="header-links" htmlTag="ul" htmlClass="header register-links" />
             </container>
         </referenceContainer>
-
 
         <referenceContainer name="footer">
             <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="Magento_Store::switch/stores.phtml"/>
@@ -27,12 +21,17 @@
             </block>
         </referenceContainer>
 
-<!--        <referenceBlock name="report.bugs" remove="true"/>-->
         <referenceBlock name="footer_links" remove="true"/>
-
-<!--        <move element="copyright" destination="before.body.end"/>-->
         <referenceBlock name="copyright" remove="true"/>
         <referenceBlock name="header.panel" remove="true"/>
+
+        <move element="customer" destination="header-links" before="authorization-link" />
+        <move element="authorization-link" destination="header-links" before="wish-list-link" />
+        <move element="wish-list-link" destination="header-links" before="minicart" />
+        <move element="minicart" destination="header-links" before="top.search"/>
+        <move element="top.search" destination="header-right" after="-" />
+        
+        <move element="navigation.sections" destination="header-wrapper" before="header-right" />
 
         <move element="form.subscribe" destination="footer-container" before="-"/>
 

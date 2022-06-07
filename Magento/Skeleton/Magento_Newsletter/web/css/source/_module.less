@@ -5,19 +5,19 @@
 & when (@media-common = true) {
 
     .block.newsletter {
-        background: #f4f4f4;
-        padding: 30px 15px;
+        background: @color-Skelrton__newsletter-background;
+        padding: @indent__l @indent__s + 5;
         margin: 0 auto;
 
-        display: flex;
+        .lib-vendor-prefix-display(flex);
 
         .title-newsletter {
             h2 {
                 margin-top: 0;
-                font-weight: 600;
+                font-weight: @font-weight__semibold;
                 letter-spacing: 2px;
-                color: #222;
-                font-size: 30px;
+                color: @color-Skeleton__secondary-color;
+                .lib-font-size(30);
                 text-transform: uppercase;
             }
         }
@@ -31,27 +31,27 @@
         }
 
         input {
-            width: 312px;
+            width: 300px;
             background: transparent;
             border: 1px solid #ddd;
             height: 49px;
-            padding-left: 35px;
+            padding-left: @indent__l + 5;
         }
 
         ::placeholder {
-            color: #888888;
+            color: @color-Skeleton__accent-text;
         }
 
         .action.subscribe.primary {
-            padding: 17px 35px;
+            padding: @indent__s + 7 @indent__l + 5;
             border: 0;
             border-radius: 0;
             margin: 0;
-            color: #fff;
-            background: #222;
+            color: @color-Skeleton__accent-color;
+            background: @color-Skeleton__secondary-color;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-weight: 400;
+            font-weight: @font-weight__regular;
         }
     }
 }
@@ -59,18 +59,25 @@
 //
 //  Mobile
 // ______________________________________________
-
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m)  {
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
     .block.newsletter {
-        flex-wrap: wrap;
+        .lib-vendor-prefix-flex-wrap(wrap);
+   }
+
+            
+}
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+    .block.newsletter {
+        .lib-vendor-prefix-flex-wrap(wrap);
 
         .title-newsletter, .field {
-            margin-bottom: 10px;
+            margin-bottom: @indent__s;
         }
 
         .form.subscribe {
-            display: flex;
-            flex-wrap: wrap;
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-flex-direction(column);
         }
 
         input {

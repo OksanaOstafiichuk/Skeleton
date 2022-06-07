@@ -1,0 +1,25 @@
+<?php
+/* @var \Magento\Wishlist\Block\Link $block */
+?>
+<li class="link wishlist" data-bind="scope: 'wishlist'">
+    <a class="wishlist-link"<?= /* @noEscape */ $block->getLinkAttributes() ?>>
+        <span class="wishlist-text"><?= $block->escapeHtml($block->getLabel()) ?></span>
+    <!-- ko if: wishlist().counter -->
+        <span data-bind="text: wishlist().items.length" class="counter qty"></span>
+        <!-- /ko -->
+    </a>
+</li>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "wishlist": {
+                        "component": "Magento_Wishlist/js/view/wishlist"
+                    }
+                }
+            }
+        }
+    }
+
+</script>

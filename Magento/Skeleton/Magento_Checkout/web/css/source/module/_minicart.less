@@ -1,8 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Variables
 //  _____________________________________________
@@ -24,7 +19,6 @@
 
     .block-minicart {
         .items-total {
-            // float: left;
             margin: 0 @indent__s;
 
             .count {
@@ -45,7 +39,7 @@
             .price-wrapper {
                 &:first-child {
                     .price {
-                        font-size: @font-size__l;
+                        .lib-font-size(30);
                         font-weight: @font-weight__bold;
                     }
                 }
@@ -57,7 +51,7 @@
 
             &.empty {
                 display: block;
-                font-size: 14px;
+                .lib-font-size(14);
                 padding: @indent__l 0 @indent__base;
                 text-align: center;
             }
@@ -78,14 +72,14 @@
 
         .block-content {
             > .actions {
-                margin-top: 15px;
+                margin-top: @indent__s + 5;
 
                 > .secondary {
                     text-align: center;
                 }
 
                 > .primary {
-                    margin: 0 @indent__s 15px;
+                    margin: 0 @indent__s @indent__s + 5;
 
                     .action {
                         &.primary {
@@ -97,7 +91,7 @@
                 }
 
                 .paypal-logo {
-                    margin-top: 15px;
+                    margin-top: @indent__s + 5;
                     text-align: center;
                 }
             }
@@ -107,17 +101,16 @@
         .block-product-link,
         .block-cms-link,
         .block-banners {
-            margin: 15px 0 0;
+            margin: @indent__s + 5 0 0;
             text-align: center;
         }
     }
 
     .minicart-wrapper {
         .lib-dropdown(
-            // @_toggle-selector: ~'.action.showcart',
             @_options-selector: ~'.block-minicart',
             @_dropdown-list-width: 320px,
-            @_dropdown-list-position-right: -10px,
+            @_dropdown-list-position-right: -@indent__s,
             @_dropdown-list-pointer-position: right,
             @_dropdown-list-pointer-position-left-right: 12px,
             @_dropdown-list-z-index: 101,
@@ -144,15 +137,14 @@
 
         .product {
             .actions {
-                // float: right;
-                margin: -28px 0 0;
+                margin: -@indent__l - 2 0 0;
 
                 > .primary,
                 > .secondary {
                     display: inline;
 
                     &:not(:last-child) {
-                        margin-right: 15px;
+                        margin-right: @indent__s + 5;
                     }
                 }
             }
@@ -160,11 +152,11 @@
 
         .action {
             &.close {
-                height: 30px;
+                height: @indent__l;
                 position: absolute;
                 right: 0;
                 top: 0;
-                width: 25px;
+                width: @indent__m;
                 .lib-button-reset();
                 .lib-button-icon(
                     @icon-remove,
@@ -179,27 +171,19 @@
                 white-space: nowrap;
 
                 .text {
-                    // &:extend(.abs-visually-hidden all);
                     position: relative;
                     text-transform: uppercase;
-                    font-size: 12px;
+                    .lib-font-size(12);
                     letter-spacing: 1px;
                     vertical-align: middle;
                     color: @color-Skeleton__secondary-color;
                     
-                    &:hover {
-                        text-decoration: none;
-                        color: @color-Skeleton__accent-text;
-                    }
                 }
 
                 .counter.qty {
-                    .lib-css(background, @active__color);
-                    .lib-css(color, @page__background-color);
+                    .lib-css(color, @color-Skeleton__accent-text);
                     .lib-css(height, @minicart-qty__height);
                     .lib-css(line-height, @minicart-qty__height);
-                    border-radius: 2px;
-                    display: inline-block;
                     margin: 3px 0 0;
                     min-width: 18px;
                     overflow: hidden;
@@ -218,18 +202,24 @@
                     }
                 }
 
-                .counter-number {
-                    text-shadow: 0 0 7px rgba(0, 0, 0, 1);
+                .counter-number::before {
+                    content: '(';
+                }
+
+                .counter-number::after {
+                    content: ')';
                 }
 
                 .counter-label {
                     &:extend(.abs-visually-hidden all);
                 }
             }
+
+
         }
 
         .minicart-widgets {
-            margin-top: 15px;
+            margin-top: @indent__s + 5;
         }
     }
 
@@ -239,7 +229,7 @@
         border-left: 0;
         border-right: 0;
         overflow-x: auto;
-        padding: 15px;
+        padding: @indent__s + 5;
     }
 
     .minicart-items {
@@ -277,7 +267,7 @@
 
         .message {
             margin-bottom: 0;
-            margin-top: 10px;
+            margin-top: @indent__s;
         }
 
         .product-item-name {
@@ -323,11 +313,6 @@
         }
 
         .product {
-            // > .product-item-photo,
-            // > .product-image-container {
-            //     // float: left;
-            // }
-
             .toggle {
                 &:extend(.abs-toggling-title all);
                 border: 0;
@@ -392,7 +377,7 @@
 
         .update-cart-item {
             .lib-font-size(11);
-            margin-left: 5px;
+            margin-left: @indent__xs;
             vertical-align: top;
         }
 
@@ -421,6 +406,19 @@
             }
         }
     }
+
+                .page-header {
+                    .header.content {
+                        .header.content-right {
+                            .minicart-wrapper {
+                                a:hover {
+                                    text-decoration: none;
+                                    color: @color-Skeleton__accent-text;
+                                }
+                            }
+                        }
+                    }
+                }
 }
 
 //
@@ -439,12 +437,10 @@
         .lib-clearfix();
         .product {
             .actions {
-                // float: left;
-                margin: 10px 0 0 0;
+                margin: @indent__s 0 0 0;
             }
         }
         .update-cart-item {
-            // float: right;
             margin-left: 0;
         }
     }
@@ -456,7 +452,7 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .minicart-wrapper {
-        // margin-left: 13px;
+        margin-left: 0;
 
         .block-minicart {
             width: 390px;

@@ -1,0 +1,26 @@
+<?php
+/** @var Magento\Customer\Block\Account\Customer $block */
+?>
+<?php if ($block->customerLoggedIn()) : ?>
+    <li class="customer-welcome">
+
+        <script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "customer": {
+                            "component": "Magento_Customer/js/view/customer"
+                        }
+                    }
+                }
+            }
+        }
+        </script>
+        <?php if ($block->getChildHtml()) :?>
+            <div class="customer-menu" data-target="dropdown">
+                <?= $block->getChildHtml() ?>
+            </div>
+        <?php endif; ?>
+    </li>
+<?php endif; ?>
