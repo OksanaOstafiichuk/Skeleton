@@ -1,11 +1,11 @@
 define(['jquery', 'niceSelect'], function ($) {
     'use strict';
 
-    $.widget('mage.sorter', {
+    $.widget('Skeleton.sorter', {
         _create: function () {
             $('.sorter-options').niceSelect();
         }
     });
 
-    return $.mage.sorter;
+    return $.Skeleton.sorter;
 });
