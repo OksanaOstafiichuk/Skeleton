@@ -83,8 +83,8 @@ use Magento\Framework\App\Action\Action;
                                             <?php endif; ?>
                                             <?php if ($showWishlist || $showCompare): ?>
                                                 <div class="actions-secondary" data-role="add-to-links">
-                                                    <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>" class="action product">
-                                                        <span><?= $block->escapeHtml($_item->getName()) ?></span>
+                                                    <a title="<?= $block->escapeHtmlAttr(__('Add to Product Page')) ?>" href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>" class="action product">
+                                                        <span><?= $block->escapeHtml(__('Add to Product Page')) ?></span>  
                                                     </a>
                                                     <?php if ($this->helper(\Magento\Wishlist\Helper\Data::class)->isAllow() && $showWishlist): ?>
                                                         <a href="#"
